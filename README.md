@@ -1,19 +1,98 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🤖 ChatMate – AI Powered Chatbot
 
-Currently, two official plugins are available:
+An intelligent and interactive AI chatbot powered by **Google Gemini API**. ChatMate provides a modern, responsive, and user-friendly interface for seamless AI-powered conversations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- 🤖 AI-powered conversations using Google Gemini API.
+- 💬 Real-time chat interaction.
+- 🎨 Modern and attractive user interface.
+- 📱 Fully responsive design for desktop, tablet, and mobile.
+- ⚡ Smooth and interactive user experience.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- Frontend: JavaScript / React, HTML, CSS
+- AI Integration: Google Gemini API
+- Version Control: Git & GitHub
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# ChatMate
->>>>>>> a8d4faaab071603e088648a6e7bb08da3a131319
+## 📸 Screenshots
+
+<img width="1919" height="904" alt="image" src="https://github.com/user-attachments/assets/b47e3b9e-385d-4e43-bac4-9d8a0e1af0f0" />
+
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/vishweshjain/ChatMate.git
+```
+
+### 2. Navigate to Project
+
+```bash
+cd ChatMate
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Configure Gemini API
+
+Create a `.env` file in your backend directory:
+
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
+```
+
+Get your API key from:
+
+```
+https://aistudio.google.com/apikey
+```
+
+### 5. Start the Project
+
+```bash
+npm run dev
+```
+
+## 🔐 Environment Variables
+
+| Variable       |        Description    |
+|----------------|-----------------------|
+| GEMINI_API_KEY | Google Gemini API key |
+
+Make sure `.env` is included in your `.gitignore` file.
+
+## 🚀 Future Improvements
+
+- [ ] Chat history management
+- [ ] Multiple chat sessions
+- [ ] Dark mode
+- [ ] AI typing indicator
+- [ ] Improved error handling
+- [ ] Enhanced conversation experience
+
+## 🤝 Contributing
+
+Contributions, suggestions, and improvements are welcome!
+
+Feel free to fork this repository and submit a pull request.
+
+## 👨‍💻 Author
+
+**Vishwesh Jain**
+
+https://www.linkedin.com/in/vishwesh-jain/
+
+## ⭐ Support
+
+If you like this project, don't forget to give it a ⭐ on GitHub!
+
+---
