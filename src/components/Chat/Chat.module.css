@@ -1,0 +1,189 @@
+.Chat {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 2vw, 16px);
+  height: 100%;
+  padding: clamp(14px, 3vw, 24px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #b8a4ff transparent;
+}
+
+.Chat::-webkit-scrollbar {
+  width: 7px;
+}
+
+.Chat::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.Chat::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #c4b5fd, #7b5cff);
+  border-radius: 10px;
+}
+
+.MessageWrapper {
+  display: flex;
+  width: 100%;
+  animation: messageSlideIn 0.42s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.MessageWrapper[data-role="user"] {
+  justify-content: flex-end;
+}
+
+.MessageWrapper[data-role="assistant"] {
+  justify-content: flex-start;
+}
+
+.MessageWrapper[data-role="system"] {
+  justify-content: center;
+}
+
+.Message {
+  max-width: min(82%, 560px);
+  padding: 13px 17px;
+  border-radius: 18px;
+  font-size: clamp(14px, 1.8vw, 15px);
+  line-height: 1.65;
+  font-weight: 500;
+  color: #352d5d;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  will-change: transform, opacity;
+}
+
+.MessageWrapper[data-role="assistant"] .Message {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(245, 242, 255, 0.96));
+  border: 1px solid rgba(124, 108, 240, 0.13);
+  border-bottom-left-radius: 6px;
+  box-shadow:
+    0 5px 16px rgba(74, 58, 255, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.MessageWrapper[data-role="user"] .Message {
+  background: linear-gradient(135deg, #8067ff 0%, #5539ea 58%, #4932d8 100%);
+  color: #ffffff;
+  border-bottom-right-radius: 6px;
+  box-shadow:
+    0 7px 18px rgba(80, 55, 225, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.MessageWrapper[data-role="system"] .Message {
+  max-width: min(90%, 480px);
+  background: rgba(255, 255, 255, 0.72);
+  color: #77718d;
+  border: 1px solid rgba(124, 108, 240, 0.1);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  box-shadow: 0 4px 12px rgba(74, 58, 255, 0.05);
+}
+
+.Message > :first-child {
+  margin-top: 0;
+}
+
+.Message > :last-child {
+  margin-bottom: 0;
+}
+
+.Message p {
+  margin: 0 0 0.7em;
+}
+
+.Message h1,
+.Message h2,
+.Message h3,
+.Message h4 {
+  margin: 0.9em 0 0.45em;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.Message h1:first-child,
+.Message h2:first-child,
+.Message h3:first-child,
+.Message h4:first-child {
+  margin-top: 0;
+}
+
+.Message ul,
+.Message ol {
+  margin: 0.55em 0;
+  padding-left: 1.35em;
+}
+
+.Message li {
+  margin-bottom: 0.35em;
+}
+
+.Message li::marker {
+  color: #7b5cff;
+}
+
+.Message blockquote {
+  margin: 0.8em 0;
+  padding: 0.55em 0.9em;
+  color: #655a8d;
+  border-left: 3px solid #8b7bff;
+  border-radius: 0 10px 10px 0;
+  background: rgba(123, 92, 255, 0.07);
+}
+
+.Message pre {
+  margin: 0.8em 0;
+  padding: 12px 14px;
+  overflow-x: auto;
+  border-radius: 12px;
+  background: #211b3d;
+  color: #f4f1ff;
+  font-size: 13px;
+  line-height: 1.6;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.Message code {
+  padding: 0.15em 0.38em;
+  border-radius: 6px;
+  background: rgba(123, 92, 255, 0.12);
+  color: #5438c9;
+  font-size: 0.88em;
+  font-weight: 600;
+}
+
+.MessageWrapper[data-role="user"] .Message code {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.Message pre code {
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.Message a {
+  color: #6650e8;
+  font-weight: 600;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+@keyframes messageSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
